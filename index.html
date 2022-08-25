@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>test</title>
+
+<link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+<script src="js/mobiscroll.javascript.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+<script>
+    function sendEmail() {
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "eom@rsp-corp.com",
+	Password : "Djadmswhd1",
+	To : 'eom@rsp-corp.com',
+	From : "eom@rsp-corp.com",
+	Subject : "test_SMTP",
+	Body : "test test test",
+	}).then(
+		message => alert(message)
+	);
+}
+</script>
+</head>
+<body>
+    <form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>
